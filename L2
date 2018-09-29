@@ -1,0 +1,81 @@
+   -rw-rw-r--. 1 anna anna  0 сен 28 19:09 check
+drw-rw-rw-. 2 anna anna 22 сен 28 18:16 dir
+-rw-r-----. 1 root anna  5 сен 28 17:56 file
+-rw-------. 1 anna anna  0 сен 28 19:35 file1
+-rw-rw-rw-. 1 anna anna  0 сен 28 19:37 file2
+
+./dir:
+ls: невозможно получить доступ к ./dir/new_file: Отказано в доступе
+итого 0
+-????????? ? ? ? ? 
+
+
+  406  su 
+  407  umask
+  408  cd
+  409  mkdir testt
+  410  cd testt
+  411  touch file
+  412  ls -l
+  413  chmod ugo-rwx file
+  414  ls -l
+  415  echo "test" > file
+  416  cat file
+  417  chmod u+w
+  418  chmod u+w file
+  419  ll file
+  420  echo "test" > file
+  421  cat file
+  422  chmod g+r file
+  423  ll file
+  424  cat file
+  425  chmod u+r file
+  426  ll
+  427  cat file
+  428  mkdir dir
+  429  touch new_file
+  430  echo "tile 2" > new_file
+  431  cd dir
+  432  ls
+  433  echo "file 2" > new_file
+  434  ls
+  435  cd ..
+  436  rm new_file
+  437  ls
+  438  cd dir
+  439  ls
+  440  chmod ugo-x
+  441  chmod ugo-x dir
+  442  cd testt
+  443  cd ..
+  444  chmod ugo-x dir
+  445  cd dir
+  446  cat /home/testt/dir/new_file
+  447  chmod ugo+rwx dir
+  448  cf dir
+  449  cd dir
+  450  ls 
+  451  cat new_file
+  452  cd ..
+  453  chmod ugo-x dir
+  454  cat /home/testt/dir/new_file
+  455  cat new_file
+  456  cat dir/new_file
+  457  rm dir/new_file
+  458  ls
+  459  chown root file
+  460  chown root:root file
+  461  umask chgrp root file
+  462  chgrp root file
+  463  umask
+  464  touch check
+  465  ll check
+  466  umask  177
+  467  touch file1
+  468  ll file1
+  469  umask 111
+  470  touch file2
+  471  ll file2
+  472  cat file
+  473  ls -lR
+  
