@@ -1,0 +1,18 @@
+[Unit]
+Description=look at remote  users
+After=network.target
+
+[Service]
+Type-simple
+ExecStart=/opt/remote_users/rem_users.sh
+Restart=on-failure
+User=root
+Goup=root
+Umask=660
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+#данный файл добавляем добавляем в /etc/systemd/system/
